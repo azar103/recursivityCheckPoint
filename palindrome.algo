@@ -1,0 +1,16 @@
+FUNCTION palindrome(word: STRING, first: INTEGER, end: INTEGER) : BOOLEAN
+VAR
+    first: INTEGER := 0;
+    end: INTEGER := word.length-1;
+BEGIN
+    IF (word = "") THEN
+        RETURN TRUE;
+    ELSE_IF (word.length = 1) THEN
+        RETURN TRUE;    
+    ELSE_IF (word[first] = word[end] AND first < end) THEN
+       palindrome(word, first+1, end-1)
+    ELSE
+       RETURN FALSE;   
+    END_IF
+        
+END
