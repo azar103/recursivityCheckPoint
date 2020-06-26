@@ -5,12 +5,14 @@ VAR
 BEGIN
     IF (word = "") THEN
         RETURN TRUE;
-    ELSE_IF (word.length = 1) THEN
+    ELSE_IF (first = end) THEN
         RETURN TRUE;    
-    ELSE_IF (word[first] = word[end] AND first < end) THEN
-       palindrome(word, first+1, end-1)
-    ELSE
-       RETURN FALSE;   
+    ELSE_IF ( first < end) THEN
+       IF (word[first] = word[end]) THEN
+          palindrome(word, first+1, end-1)
+       ELSE 
+          RETURN FALSE;
+       END_IF      
     END_IF
         
 END
