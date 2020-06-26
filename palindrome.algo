@@ -5,7 +5,7 @@ VAR
 BEGIN
     IF (word = "") THEN
         RETURN TRUE;
-    ELSE_IF (first = end) THEN
+    ELSE_IF (first == end) THEN
         RETURN TRUE;    
     ELSE_IF ( first < end) THEN
        IF (word[first] = word[end]) THEN
